@@ -3,3 +3,5 @@
 /myprojectenv
 myprojectenv/Lib/site-packages/pip/__init__.py
 output_batches
+pp
+processed_data

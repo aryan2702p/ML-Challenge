@@ -13,7 +13,7 @@ def shuffle_and_split_csv(file_path, batch_size):
     num_batches = (total_rows // batch_size) + (1 if total_rows % batch_size != 0 else 0)
 
     # Create a directory for the output files if it doesn't exist
-    output_dir = "output_batches"
+    output_dir = "pp"
     os.makedirs(output_dir, exist_ok=True)
 
     # Split the DataFrame and save each batch as a new CSV file
@@ -31,5 +31,5 @@ def shuffle_and_split_csv(file_path, batch_size):
 
 # Example usage
 file_path = 'dataset/train.csv'  # Replace with your actual CSV file path
-batch_size = 70000            # Define your desired batch size
+batch_size = 10000            # Define your desired batch size
 shuffle_and_split_csv(file_path, batch_size)
