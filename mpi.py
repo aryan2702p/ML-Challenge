@@ -52,7 +52,7 @@ if __name__ == "__main__":
     start = time.time()
     if rank == 0:
         # Load the data (only on root process)
-        data = pd.read_csv('output_batches/batch_10.csv')
+        data = pd.read_csv('dataset/test.csv',encoding='latin1')
     else:
         data = None
 
@@ -67,6 +67,6 @@ if __name__ == "__main__":
 
     # Save the results (only in the root process)
     if rank == 0:
-        processed_df.to_csv('processed_data/batch10.csv', index=False)
+        processed_df.to_csv('processed_data/test.csv', index=False)
         print("processed_text_mpi.csv")
         print("Time taken:", time.time()-start)
